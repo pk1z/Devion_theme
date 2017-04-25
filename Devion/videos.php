@@ -32,7 +32,7 @@ get_header(); ?>
 				    $paged = get_query_var('page');
 				else
 				    $paged = 1;
-				$wp_query = new WP_Query(array('post_type' => 'video_type', 'paged' => $paged ));
+				$wp_query = new WP_Query(array('post_type' => 'video_type', 'paged' => $paged , 'posts_per_page' => 12));
 				?>
 				<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 				
